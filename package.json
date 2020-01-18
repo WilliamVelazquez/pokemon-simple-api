@@ -1,0 +1,28 @@
+{
+  "name": "pokemon-simple-api",
+  "version": "1.0.0",
+  "description": "Simple Pokemon API developed with Express to get specific data from the PokéAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WilliamVelazquez/pokemon-simple-api.git"
+  },
+  "keywords": [
+    "Express",
+    "Node",
+    "Pokémon",
+    "Pokédex",
+    "Pokemon",
+    "Pokedex",
+    "WilliamVelazquez"
+  ],
+  "author": "William Velazquez <william.velazquez.a@gmail.com> (https://twitter.com/WilliamVlazquez)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WilliamVelazquez/pokemon-simple-api/issues"
+  },
+  "homepage": "https://github.com/WilliamVelazquez/pokemon-simple-api#readme"
+}
