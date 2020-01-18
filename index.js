@@ -1,8 +1,11 @@
 const express = require('express');
+const cors = require("cors");
 const app = express();
 
 const { config } = require('./config/index');
 const pokemonsAPI = require('./routes/pokemons');
+
+app.use(cors());
 
 pokemonsAPI(app);
 
