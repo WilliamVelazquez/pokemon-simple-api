@@ -10,8 +10,8 @@ function pokemonAPI(app) {
   router.get('/', async function(request, response, next) {
     try {
       const interval = {
-        limit: 10,
-        offset: 1
+        limit: parseInt(request.query.quantity, 10) || 10,
+        offset: parseInt(request.query.initial, 10) || 1
       }
       const pokemons = await P.getPokemonsList(interval);
       response.status(200).json({
@@ -25,10 +25,22 @@ function pokemonAPI(app) {
 
   router.get('/:id', async function(request, response, next) {
     try {
-      const pokemons = await P.getPokemonByName(request.params.id);
+      const pokemon = await P.getPokemonByName(request.params.id);
       response.status(200).json({
-        data: pokemons,
+        data: pokemon,
         message: 'pokemon listed',
+      });
+    } catch (error) {
+      next(error);
+    }
+  });
+
+  router.get('/characteristic/:id', async function(request, response, next) {
+    try {
+      const characteristic = await P.getCharacteristicById(request.params.id);
+      response.status(200).json({
+        data: characteristic,
+        message: 'characteristic listed',
       });
     } catch (error) {
       next(error);
