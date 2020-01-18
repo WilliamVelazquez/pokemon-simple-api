@@ -2,14 +2,9 @@ const express = require('express');
 const app = express();
 
 const { config } = require('./config/index');
+const pokemonsAPI = require('./routes/pokemons');
 
-app.get('/', function(request, response){
-  response.send('Test');
-});
-
-app.get('/json', function(request, response){
-  response.json({ test: 'Ok' });
-});
+pokemonsAPI(app);
 
 app.listen(config.port, function(){
   console.log(`Listening http://localhost:${config.port}`);
