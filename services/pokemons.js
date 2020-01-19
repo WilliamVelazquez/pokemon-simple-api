@@ -25,8 +25,7 @@ class PokemonService {
 	}
 
 	async getCharacteristicById(id) {
-		// const pokemonResource = await Promise.resolve(pokemonInfoMock);
-		const characteristic = await this.P.resource(id);
+		const characteristic = await this.P.getCharacteristicById(id);
 		return characteristic || {};
 	}
 }
