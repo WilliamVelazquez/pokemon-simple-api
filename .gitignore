@@ -20,6 +20,10 @@ pids
 dist
 build/Release
 
+#tests
+.nyc*/
+coverage/
+
 # TypeScript cache
 *.tsbuildinfo
 

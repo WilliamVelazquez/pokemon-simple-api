@@ -12,20 +12,6 @@ const pokemonsMock = [
   { name: 'metapod', url: 'https://pokeapi.co/api/v2/pokemon/11/' }
 ];
 
-class PokemonsServiceMock {
-	async getPokemonsList(){
-		return Promise.resolve(pokemonsMock);
-	}
-
-	async getPokemonByName(){
-		return Promise.resolve(pokemonByNameMock);
-	}
-
-	async getPokemonResource(){
-		return Promise.resolve(pokemonInfoMock);
-	}
-}
-
 const pokemonByNameMock = {
   abilities: [
     {
@@ -10317,6 +10303,20 @@ const pokemonInfoMock = {
     }
   ]
 };
+
+class PokemonsServiceMock {
+	async getPokemonsList(){
+		return Promise.resolve(pokemonsMock);
+	}
+
+	async getPokemonByName(){
+		return Promise.resolve(pokemonByNameMock);
+	}
+
+	async getPokemonResource(){
+		return Promise.resolve(pokemonInfoMock);
+	}
+}
 
 module.exports = {
 	pokemonsMock,
