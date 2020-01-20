@@ -5,7 +5,9 @@ const app = express();
 const { config } = require('./config');
 const pokemonsAPI = require('./routes/pokemons');
 
-app.use(cors());
+const corsOptions = { origin: "*" };
+
+app.use(cors(corsOptions));
 
 pokemonsAPI(app);
 
